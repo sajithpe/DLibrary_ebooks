@@ -1,0 +1,16 @@
+SMAP
+booksPage_jsp.java
+JSP
+*S JSP
+*F
++ 0 booksPage.jsp
+booksPage.jsp
+*L
+1,42:44
+44,11:88
+54,8:99
+62,3:107,3
+65,13:116
+79,6:131
+84,4:137
+*E
