@@ -14,7 +14,7 @@
 
 <script>
 
-    window.onload = function() {
+    window.onload = function () {
         if (uname == "noUn") {
             document.getElementById("loginbtn").style.display = "block";
             document.getElementById("user_icon").title = "Log In";
@@ -24,11 +24,14 @@
             document.getElementById("user_icon").title = uname;
         }
     };
-    
-   
+
+
 </script>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a class="navbar-brand" href="#" data-abc="true">DLibrary Ebooks</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" data-abc="true">
+        <h1>DLibrary Books</h1>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" 
             aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"> 
         <span class="navbar-toggler-icon"></span> </button>
@@ -36,26 +39,27 @@
 
 
         <ul class="navbar-nav ml-auto nav-flex-icons">
+
+
             <form class="form-inline my-2 my-lg-0"> 
                 <div class="col-xs-5"> <input class="form-control mr-sm-2" type="text" placeholder="Search"/></div>
                 <button class="btn btn-secondary " type="submit">Search</button> 
             </form>      
+            <a class="nav-link btn" id="navbarDropdownMenuLink-333" 
+               aria-haspopup="true" aria-expanded="false">
+                <i id="user_icon" class="fa fa-user-circle" data-toggle="tooltip" data-placement="top" title="" onclick="user_icon_btn()"></i>
+            </a>
+            <a class="nav-link btn" id="navbarDropdownMenuLink-333" 
+               aria-haspopup="true" aria-expanded="false">
+                <i id="logoutbtn" class="fas fa-sign-out-alt" style="display: none" data-toggle="tooltip" data-placement="top" title="Log Out" onclick="log_out()"></i>
+                <i id="loginbtn" class="fas fa-sign-in-alt" style="display: none" data-toggle="tooltip" data-placement="top" title="Log In" onclick="user_icon_btn()"></i>
+            </a>
+
+
         </ul>
+
     </div> 
 
-    <ul class="navbar-nav ml-auto nav-flex-icons">
-
-        <a class="nav-link btn" id="navbarDropdownMenuLink-333" 
-           aria-haspopup="true" aria-expanded="false">
-            <i id="user_icon" class="fa fa-user-circle" data-toggle="tooltip" data-placement="top" title="" onclick="user_area()"></i>
-        </a>
-        <a class="nav-link btn" id="navbarDropdownMenuLink-333" 
-           aria-haspopup="true" aria-expanded="false">
-            <i id="logoutbtn" class="fas fa-sign-out-alt" style="display: none" data-toggle="tooltip" data-placement="top" title="Log Out" onclick="log_out()"></i>
-            <i id="loginbtn" class="fas fa-sign-in-alt" style="display: none" data-toggle="tooltip" data-placement="top" title="Log In" onclick="user_area()"></i>
-        </a>
-
-    </ul>
 </div>
 </nav> 
 

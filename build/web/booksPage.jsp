@@ -54,14 +54,16 @@
 <div class="container p-3 my-3 border">
     <div class="row g-2">
         <%            int x = 0;
-            String tit = "";
-            String auth = "";
-            String cat = "";
+            String bk_tit = "";
+            String bk_auth = "";
+            String bk_cat = "";
+            String bk_ty = "";
 
             while (x < 10) {
-                tit = "Title" + x;
-                auth = "Author" + x;
-                cat = "Category" + x;
+                bk_tit = "Title" + x;
+                bk_auth = "Author" + x;
+                bk_cat = "Category" + x;
+                bk_ty = "Type" + x;
 
         %>
 
@@ -69,9 +71,10 @@
             <div class="card mb-2">
                 <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                 <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product"><% out.println(tit); %></a></h4>
-                    <p class="card-text"><% out.println(auth); %></p>
-                    <p class="card-text"><% out.println(cat); %></p>
+                    <h4 class="card-title"><a href="product.html" title="View Product"><% out.println(bk_tit); %></a></h4>
+                    <p class="card-text"><% out.println(bk_auth); %></p>
+                    <p class="card-text"><% out.println(bk_cat); %></p>
+                    <p class="card-text"><% out.println(bk_ty); %></p>
                     <div class="row">
                         <div class="col">
                             <h3 class="btn btn-danger btn-block">Download</h3>

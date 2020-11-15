@@ -14,7 +14,7 @@
 
 
 
-<div class="container">
+<div class="container-fluid">
     <br>
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="myTab" role="tablist" >
@@ -47,10 +47,7 @@
         </div>
 
         <div id="userarea1" class="tab-pane fade" role="tabpanel"aria-labelledby="user_tab"><br> 
-            <%--  <div class="p-3 my-3 border">
-                <jsp:include page="booksPage.jsp"/>
-            </div>     --%>
-
+            
             <div id="ulog_div" class="p-3 my-3 border" style="display: none">
                 <jsp:include page="login.jsp"/>
             </div>

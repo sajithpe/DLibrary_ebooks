@@ -13,7 +13,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jscript2.js"></script>
+    <script src="js/login_js.js"></script>
 
     <body>
         <div class="container">

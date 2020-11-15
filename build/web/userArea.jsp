@@ -27,36 +27,66 @@
 </style>
 
 <div class="row">
-<div class="container col-sm-2">
-  
-  <!-- Nav pills -->
-  <ul class="nav flex-column nav-pills" role="tablist">
-      <li class="nav-item ">
-      <a class="nav-link active " data-toggle="pill" href="#home">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link"  data-toggle="pill" href="#menu1">Menu 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link"  data-toggle="pill" href="#menu2">Menu 2</a>
-    </li>
-  </ul>
-</div>
-  <!-- Tab panes -->
-  <div class="tab-content col-lg">
-    <div id="home" class="container tab-pane active"><br>
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="container col-sm-2 border">
+        <br>
+        <!-- Nav pills -->
+        <ul class="nav flex-column nav-pills" role="tablist">
+            <li class="nav-item ">
+                <a class="nav-link active " data-toggle="pill" href="#myprofile">My Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  data-toggle="pill" href="#favourite">Favourites</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  data-toggle="pill" href="#addbook">Add books</a>
+            </li>
+        </ul>
     </div>
-    <div id="menu1" class="container tab-pane fade"><br>
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <!-- Tab panes -->
+    <div class="tab-content col-lg border">
+        <div id="myprofile" class="container tab-pane active"><br>
+            <div class="row ">
+                <div class="col">
+                    <h3 id="myprotext">My Profile</h3> 
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="edit_details_btn()
+                    return false;">Edit details</button>
+                </div>
+            </div>
+            <div class="col-sm1"></div>
+            <div class="container" id="myprodata" >
+
+                <!--          <div class="form-group">
+                             <label for="uname">Username:</label>
+                             <input type="text" class="form-control" id="prouname" placeholder="Enter user name" name="pro_uname">
+                         </div>
+                         
+                         <div class="form-group">
+                             <label for="email">Email:</label>
+                             <input type="email" class="form-control" id="proemail" placeholder="Enter email" name="pro_email">
+                         </div>
+                         <div class="form-group">
+                             <label for="pw">Password:</label>
+                             <input type="password" class="form-control" id="propw" placeholder="Enter password" name="pro_pw">
+                         </div>
+                -->       
+            </div><br>
+            <div class="alert alert-danger" style="display: none" id="er"></div>
+            <div class="alert alert-success" style="display: none" id="suc"> </div>
+            <div class="form-group col-xs-4">
+                             <label for="uname">Username:</label>
+                             <input type="text" class="form-control" id="prouname" placeholder="Enter user name" name="pro_uname">
+                         </div>
+        </div>
+        <div id="favourite" class="container tab-pane fade"><br>
+            <h3>Favourites</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="addbook" class="container tab-pane fade"><br>
+            
+        </div>
     </div>
-    <div id="menu2" class="container tab-pane fade"><br>
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div>
-  </div>
 </div>
 
 </div>

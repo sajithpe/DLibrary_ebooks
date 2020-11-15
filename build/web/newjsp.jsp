@@ -5,39 +5,58 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<script src="js/navigation_js.js"></script>
  <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/login_js.js"></script>
+    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <script>
     
-$('.cont').click(function(){
+    function my_profile() {
 
-  var nextId = $(this).parents('.tab-pane').next().attr("id");
-  $('[href=#'+nextId+']').tab('show');
+    var s_id = 1;
 
-})
+    var xmlHttp = getXmlHttpRequest();
 
+    if (xmlHttp != null) {
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 1 || xmlHttp.readyState == 2 || xmlHttp.readyState == 3) {
+
+            }
+            if (xmlHttp.readyState == 4) {
+                var res = xmlHttp.responseText;
+                if (res == 0) {
+
+
+                    document.getElementById("myprotext").innerHTML = "No User details";
+                } else {
+
+                    document.getElementById("myprodata").innerHTML = res;
+
+                }
+            }
+        }
+
+        xmlHttp.open("POST", "UserSearch", true);
+        xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlHttp.send("search_id=" + s_id);
+    }
+}
+    
+    
+    
+    
 </script>
 
 
-<!-- Grid row -->
 
-<div class="container-fluid">
-  <ul class="nav nav-tabs" id="myTabs">
-    <li class="active"><a href="#home" data-url="/embed/62805/view">Home</a></li>
-    <li><a href="#profile" data-url="/embed/62806/view">Profile</a></li>
-    <li><a href="#messages" data-url="/embed/62807/view">Messages</a></li>
-  </ul>
 
-  <div class="tab-content">
-    <div class="tab-pane active" id="home">This is the home pane...</div>
-    <div class="tab-pane" id="profile"></div>
-    <div class="tab-pane" id="messages"></div>
-  </div>
+
+<!-- Page Content -->
+<div class="container" id="myprodata">
+    <h3 id="myprotext">My Profile</h3>
+    <button class="btn btn-danger" onclick="my_profile()">click me</button>
 </div>
